@@ -1,0 +1,50 @@
+
+      <div class="col-md-10" id="home">
+<img src="assets/main.jpg" class="img" width="1500" height="600">
+<p class="carousel-caption" style="font-size: larger">Welcome to</p>
+<p class="carousel-caption" style=color:#81b21b>Gym Studio</p>
+</div>
+<!--<nav class="navbar header-navbar navbar-dark navbar-expand-lg">-->
+    <div class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" id="navbar-brand" href style="font-size:30px;"><img src="assets/logo.jpg"width="50" height="50"></a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bstarget="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+
+        <a href="#home" class="nav-item nav-link">Home</a>
+        <a href="#about" class="nav-item nav-link">About</a>
+        <a href="#classes" class="nav-item nav-link">Class</a>
+        <a href="#schedule" class="nav-item nav-link">Schedule</a>
+        <a href="#coaches" class="nav-item nav-link">Coaches</a>
+        <a href="#packages" class="nav-item nav-link">Packages</a>
+        <!--<a href="#" class="nav-item nav-link">Blog</a>-->
+        <a href="#contact" class="nav-item nav-link">Contact</a>
+        </div>
+      
+        <div class="navbar-nav ms-auto">
+        <a href="/register" class="nav-item nav-link active">Register</a>
+        <!--<a href="#contact" class="nav-item nav-link active">Login</a>-->
+        
+         <!-- <button style="background-color: #81b21b;border: none;
+          color: white"(click)="navigateToLogin()">Login</button>-->
+          <button class="but"  (click)="navigateToLogin()">Login</button>
+
+        </div>
+        </div>
+        </div>
+      </div>
+      <br><br>
+      <app-about></app-about>
+      <br><br>
+      <app-classes></app-classes>
+      <br><br>
+      <app-schedule></app-schedule>
+      <br><br>
+      <app-coaches></app-coaches>
+      <br><br>
+      <app-packages></app-packages>
+      <br><br>
+      <app-contact></app-contact>

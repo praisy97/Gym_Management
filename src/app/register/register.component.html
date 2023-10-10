@@ -1,0 +1,64 @@
+<h2 align="center">Registration Form</h2>
+<br><br>
+<div class="card">
+<div align="center">
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="firstName">First Name*</label>
+    <input type="text" class="form-control" formControlName="firstName">
+    <div *ngIf="submitted && formControls['firstName'].invalid" class="error-message">
+      First Name is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name*</label>
+    <input type="text" class="form-control" formControlName="lastName">
+    <div *ngIf="submitted && formControls['lastName'].invalid" class="error-message">
+      Last Name is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email*</label>
+    <input type="text" class="form-control" formControlName="email">
+    <div *ngIf="submitted && formControls['email'].invalid" class="error-message">
+      Email is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phoneNumber">Contact Number*</label>
+    <input type="number" class="form-control" formControlName="phoneNumber">
+    <div *ngIf="submitted && formControls['phoneNumber'].invalid" class="error-message">
+      phoneNumber is required.
+    </div>
+  </div>
+  
+
+  <div class="form-group">
+    <label for="package">Package*</label>
+    <select class="form-control" formControlName="package">
+      <option value="" disabled selected>Select a package</option>
+      <option value="standard">Standard</option>
+      <option value="premium">Premium</option>
+      <option value="platinum">Platinum</option>
+    </select>
+    <div *ngIf="submitted && formControls['package'].invalid" class="error-message">
+      Package is required.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div *ngIf="showSuccessMessage" class="success-message">
+  Successfully registered!
+</div>
+</div>
+</div>
+
+<app-regpopup
+  *ngIf="showDialog"
+  [title]="dialogTitle"
+  [message]="dialogMessage"
+  (close)="closeDialog()"
+></app-regpopup>

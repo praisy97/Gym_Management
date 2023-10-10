@@ -1,0 +1,43 @@
+#packages{
+    
+    text-align:center; 
+    font-size: 50px;
+    font-weight: bolder;
+    }
+.card
+{
+
+    font-size:20px;
+    margin-left:10%;
+    width:20%;
+    height:32rem;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+    transition: width 2s, height 4s;
+}
+.card:hover {
+    /*box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);*/
+    /*width:30%;
+    height:40rem;*/
+    left:60px;
+    bottom:10px; 
+       }
+       button{
+        border:none;
+        background-color:#81b21b;
+        color:white;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+    }
+    button:hover{
+        color:gray;
+    }
+    h3{
+        font-weight: bolder;
+    }
+    h1{
+        color:#81b21b;
+        font-weight: bolder;
+    }
+    sub{
+        color:gray;
+        
+    }

@@ -1,0 +1,77 @@
+<div align="right" >
+<a routerLink="/"><button id="log">Log Out</button></a>
+<div class="trainee">
+  <img src="assets/data.jpg" class="img" width="1500" height="600">
+<div align="center">
+<br><br>
+  <h1 style="color: #81b21b">Trainee Details</h1>
+  <br><br>
+  
+  <form id="form" #customerform="ngForm" (ngSubmit)="insertdata(customerform)">
+      <table>
+          <thead align="center">
+              <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Phone no</th>
+                  <th>Package</th>
+                  <th>Trainer</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><input type="number" id="tid" name="tid" [(ngModel)]="tid"></td>
+                  <td><input type="text" id="tname" name="tname" [(ngModel)]="tname"></td>
+                  <td><input type="number" id="phno" name="phno" [(ngModel)]="phno"></td>
+                  <td>
+                      <select id="pacage" name="pacage" [(ngModel)]="pacage">
+                          <option value="standard">Standard</option>
+                          <option value="premium">Premium</option>
+                          <option value="platinum">Platinum</option>
+                      </select>
+                  </td>
+                  <td>
+                      <select id="trainer" name="trainer" [(ngModel)]="trainer">
+                          <option value="John Doe">John Doe</option>
+                          <option value="Andrew">Andrew</option>
+                          <option value="Steve">Steve</option>
+                      </select>
+                  </td>
+                  <td><button type="submit">Insert</button></td>
+              </tr>
+          </tbody>
+      </table>
+  </form>
+</div>
+
+  
+
+<div align="center">
+      <br><br>
+      <table>
+        <thead>
+          <tr align ="center">
+            <th>ID</th>
+            <th>Name</th>   
+            <th>Phone no</th>
+            <th>Package</th>
+            <th>Trainer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let train of data">
+            <!--<td>{{ train.tid }}</td>-->
+            <td><input [(ngModel)]="train.tid"></td>
+            <td><input [(ngModel)]="train.tname"></td>
+            <td><input [(ngModel)]="train.phno"></td>
+            <td><input [(ngModel)]="train.pacage"></td>
+            <td><input [(ngModel)]="train.trainer"></td>
+            <td><button  class="update" (click)="updateRow(train)">Update</button></td>
+            <td><button  class="delete" (click)="deleteRow(train)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+  </div>
+</div>

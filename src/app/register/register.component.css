@@ -1,0 +1,56 @@
+
+.card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2{
+    color:#81b21b;
+  }
+  label {
+    font-weight: bold;
+  }
+  
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  .error-message {
+    color: #d9534f; 
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  
+  button[type="submit"] {
+    background-color: #81b21b; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  

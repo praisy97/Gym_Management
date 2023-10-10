@@ -1,0 +1,28 @@
+<br><br>
+<div class="col-md-10" id="home">
+    <img src="assets/loginimg.avif" class="img" width="1500" height="600">
+    <h2 align="center" id="contact" style="font-size: 40px;">Hello Admin!</h2>
+    <br> <br>
+    <div class="carousel-caption">
+    <div class="card">
+ <form >
+    <br><br>
+    <label>UserName : </label>
+    <input type="text" id="uid" name="uid" placeholder="Username"   [(ngModel)]="user.uid">
+     <br><br>
+     <label>Password : </label>
+    <input type="password" id="upswd" name="upswd" placeholder="Password" [(ngModel)]="user.upswd">
+    <br><br><br>
+    <div align="center">
+    <button (click)="logindata()">Login</button>
+</div>
+ </form>
+</div>
+ </div>
+
+ <app-popup
+  *ngIf="showDialog"
+  [title]="dialogTitle"
+  [message]="dialogMessage"
+  (close)="closeDialog()"
+></app-popup>
